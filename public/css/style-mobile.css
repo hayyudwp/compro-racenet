@@ -1,0 +1,37 @@
+@media screen and (max-width: 768px) {
+    .price{
+        font-size: 30px;
+    }
+
+    .idr{
+        font-size: 16px;
+    }
+    .month{
+        font-size: 10px;
+    }
+
+    .btn-regist{
+        font-size: 14px;
+    }
+    .accordion-item-description img {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .absolute-about{
+        left: unset;
+    }
+    
+    .race-about{
+        font-size: 80px;
+    }
+
+    .reverse-content{
+        flex-direction: column-reverse;
+    }
+
+    .img-contact{
+        display: none;
+    }
+}
