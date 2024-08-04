@@ -3,12 +3,7 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link {{ (request()->segment(2) == 'admin-dashboard') ? '' : 'collapsed' }}" href="{{ route('dashboard') }}">
-          <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>
+      
 
       <li class="nav-item">
         <a class="nav-link {{ (request()->segment(2) == 'homecontent' || request()->segment(2) == 'pricelist') ? '' : 'collapsed' }}" data-bs-target="#home-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">

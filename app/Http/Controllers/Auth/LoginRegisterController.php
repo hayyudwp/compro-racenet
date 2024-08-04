@@ -91,7 +91,7 @@ class LoginRegisterController extends Controller
 
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
-                return redirect()->route('dashboard')
+                return redirect()->route('homecontent.index')
                     ->withSuccess('You have successfully logged in!');
             }
 
@@ -129,7 +129,7 @@ class LoginRegisterController extends Controller
     {
         if (Auth::check()) {
             try {
-                return view('pages.dashboard', compact('quotas'));
+                return view('admin.homecontent.index', compact('quotas'));
             } catch (\Exception $e) {
                 echo  $e->getMessage();
             }

@@ -62,7 +62,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label">Description</label>
-                                        <textarea class="form-control" name="desc" rows="5" required>{{ $about->desc }}</textarea>
+                                        <textarea class="form-control tinymce" name="desc" rows="5" required>{{ $about->desc }}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -84,4 +84,12 @@
 @endsection
 
 @push('scripts')
+<script>
+      tinymce.init({
+            selector: 'textarea',
+            plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            toolbar_mode: 'floating',
+            menubar: false
+        });
+</script>
 @endpush

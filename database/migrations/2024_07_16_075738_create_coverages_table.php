@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('coverages', function (Blueprint $table) {
             $table->id();
             $table->string('area')->nullable();
-            $table->string('code_map')->nullable();
+            $table->longtext('code_map')->nullable();
             $table->string('district')->nullable();
             $table->timestamps();
         });

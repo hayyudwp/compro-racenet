@@ -13,12 +13,12 @@
   <link rel="icon" href="{{ asset('img/icon-logo-150.png') }}" sizes="32x32">
   <link rel="icon" href="{{ asset('img/icon-logo-300.png') }}" sizes="192x192">
   <link rel="apple-touch-icon" href="{{ asset('img/icon-logo-300.png') }}" sizes="192x192">
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  
+
   <!-- Vendor CSS Files -->
   @stack('styles')
   <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
@@ -28,12 +28,13 @@
   <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
   <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Font Awesome (jika diperlukan) -->
+  <!-- Font Awesome (jika diperlukan) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   <link href="{{ asset('css/style-mobile.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet">
   <!-- <link href="{{ asset('css/style-view-mobile.css') }}" rel="stylesheet"> -->
 </head>
 
@@ -51,28 +52,32 @@
   <!-- Vendor JS Files -->
   <script src="{{ asset('vendor/aos/aos.js') }}"></script>
   <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script> 
+  <script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
   <script src="{{ asset('vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script> 
-  <script src="{{ asset('vendor/waypoints/noframework.waypoints.js') }}"></script> 
+  <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ asset('vendor/waypoints/noframework.waypoints.js') }}"></script>
   <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
   <!-- Template Main JS File -->
 
+  <script src="{{ asset('js/jquery-3.7.0.min.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
-  
-<script>
+  <script src="{{ asset('js/slick.min.js') }}"></script>
 
+  <script>
     $(document).ready(function() {
-        $('#coverage').change(function() {
-            var mapLink = $(this).val();
-            if (mapLink) {
-                $('#mapIframe').attr('src', mapLink);
-            } else {
-                $('#mapIframe').attr('src', '');
-            }
-        });
+
+      $('#coverage').change(function() {
+        var mapLink = $(this).val();
+        if (mapLink) {
+          $('#mapIframe').attr('src', mapLink);
+        } else {
+          $('#mapIframe').attr('src', '');
+        }
+      });
+
+      
     });
-</script>
+  </script>
   @stack('script')
 </body>
 

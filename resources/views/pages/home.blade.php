@@ -45,7 +45,7 @@
             </ul>
         </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row portfolio-container portfolio-slider" data-aos="fade-up" data-aos-delay="200">
             @foreach ($pricelists as $pricelist)
 
             <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item filter-{{$pricelist->category}}">
@@ -78,3 +78,7 @@
     @endforeach
 </main>
 @endsection
+
+@push('scripts')
+
+@endpush

@@ -1,6 +1,6 @@
 <div class="d-flex align-items-center">
 
-  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true" data-ride="carousel" data-interval="3000">
     <div class="carousel-inner">
       @foreach($headers as $index => $header)
       <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
@@ -29,3 +29,8 @@
     </button>
   </div>
 </div>
+
+@push('scripts')
+<script>
+</script>
+@endpush
