@@ -17,7 +17,7 @@
                 <div class="help-container" data-aos="fade-up" data-aos-delay="200">
                     <div class="accordion help-item filter-help-panduan">
                         @foreach ($panduan as $d)
-                        <div class="accordion-item">
+                        <div class="accordion-item open">
                             <div class="accordion-item-header">
                                 <span class="accordion-item-header-title">{{$d->question}}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
@@ -36,7 +36,7 @@
                     </div>
                     <div class="accordion help-item filter-help-faq">
                         @foreach ($faq as $d)
-                        <div class="accordion-item">
+                        <div class="accordion-item open">
                             <div class="accordion-item-header">
                                 <span class="accordion-item-header-title">{{$d->question}}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="accordion help-item filter-help-pembayaran">
                         @foreach ($pembayaran as $d)
-                        <div class="accordion-item">
+                        <div class="accordion-item open">
                             <div class="accordion-item-header">
                                 <span class="accordion-item-header-title">{{$d->question}}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
@@ -74,7 +74,7 @@
                     </div>
                     <div class="accordion help-item filter-help-troubleshoot">
                         @foreach ($troubleshoot as $d)
-                        <div class="accordion-item">
+                        <div class="accordion-item open">
                             <div class="accordion-item-header">
                                 <span class="accordion-item-header-title">{{$d->question}}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">

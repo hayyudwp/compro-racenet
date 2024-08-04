@@ -1,13 +1,38 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+    .idr{
+        font-size: 14px;
+    }
     .price{
-        font-size: 30px;
+        font-size: 28px;
+    }
+    .month {
+        font-size: 9px;
+        line-height: 4.5;    
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .idr{
+        font-size: 22px;
+    }
+    .price{
+        font-size: 50px;
+    }
+    .month {
+        font-size: 14px;
+        line-height: 5.5;    
+    }
+}
+@media screen and (max-width: 769px) {
+    .price{
+        font-size: 50px;
     }
 
     .idr{
-        font-size: 16px;
+        font-size: 24px;
     }
     .month{
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .btn-regist{
@@ -33,5 +58,16 @@
 
     .img-contact{
         display: none;
+    }
+
+    .idr{
+        font-size: 28px;
+    }
+    .price{
+        font-size: 60px;
+    }
+    .month {
+        font-size: 16px;
+        line-height: 5.5;    
     }
 }

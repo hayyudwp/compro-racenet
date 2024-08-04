@@ -33,9 +33,10 @@
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   <link href="{{ asset('css/style-mobile.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet">
-  <!-- <link href="{{ asset('css/style-view-mobile.css') }}" rel="stylesheet"> -->
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+
 </head>
 
 <body>
@@ -61,7 +62,10 @@
 
   <script src="{{ asset('js/jquery-3.7.0.min.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
-  <script src="{{ asset('js/slick.min.js') }}"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
 
   <script>
     $(document).ready(function() {

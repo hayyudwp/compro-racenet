@@ -215,42 +215,42 @@
 
     // Inisialisasi setelah halaman dimuat
     window.addEventListener('load', () => {
-        let portfolioContainer = select('.portfolio-container');
-        if (portfolioContainer) {
-            let portfolioIsotope = new Isotope(portfolioContainer, {
-                itemSelector: '.portfolio-item',
-                filter: '.filter-home'
+        // Inisialisasi Slick Slider
+        $('.portfolio-slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            // autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+            arrows: true,
+            responsive: [
+                { breakpoint: 1024, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1 } },
+                { breakpoint: 480, settings: { slidesToShow: 1 } }
+            ]
+        });
+
+        let portfolioFilters = select('#portfolio-flters li', true);
+
+        on('click', '#portfolio-flters li', function(e) {
+            e.preventDefault();
+            portfolioFilters.forEach(function(el) {
+                el.classList.remove('filter-active');
             });
+            this.classList.add('filter-active');
 
-            let portfolioFilters = select('#portfolio-flters li', true);
-
-            on('click', '#portfolio-flters li', function(e) {
-                e.preventDefault();
-                portfolioFilters.forEach(function(el) {
-                    el.classList.remove('filter-active');
-                });
-                this.classList.add('filter-active');
-
-                portfolioIsotope.arrange({
-                    filter: this.getAttribute('data-filter')
-                });
-                portfolioIsotope.on('arrangeComplete', function() {
-                    AOS.refresh();
-                });
-            }, true);
-            
-            // Pindahkan item .filter-home ke atas
-            let filterHomeItems = select('.filter-home', true);
-            filterHomeItems.forEach(item => {
-                portfolioContainer.prepend(item);
-            });
-
-            // Inisialisasi ulang Isotope untuk menerapkan perubahan
-            portfolioIsotope.reloadItems();
-            portfolioIsotope.arrange();
-        }
+            let filterValue = this.getAttribute('data-filter');
+            // Filter Slick Slider items
+            if (filterValue === 'all') {
+                $('.portfolio-slider').slick('slickUnfilter');
+            } else {
+                $('.portfolio-slider').slick('slickUnfilter');
+                $('.portfolio-slider').slick('slickFilter', filterValue);
+            }
+        }, true);
     });
 });
+
   // window.addEventListener('load', () => {
   //   let portfolioContainer = select('.portfolio-container');
   //   if (portfolioContainer) {
