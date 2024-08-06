@@ -190,7 +190,7 @@
   }
 
   /**
-   * Porfolio isotope and filter
+   * Porfolio isotope, slick and filter
    */
   document.addEventListener('DOMContentLoaded', function() {
     // Fungsi untuk memilih elemen
@@ -231,6 +231,14 @@
         });
 
         let portfolioFilters = select('#portfolio-flters li', true);
+        let initialFilterValue = '.filter-home'; // Set filter default
+
+        // Filter awal saat halaman dimuat
+        if (initialFilterValue === 'all') {
+            $('.portfolio-slider').slick('slickUnfilter');
+        } else {
+            $('.portfolio-slider').slick('slickFilter', initialFilterValue);
+        }
 
         on('click', '#portfolio-flters li', function(e) {
             e.preventDefault();
@@ -250,6 +258,7 @@
         }, true);
     });
 });
+
 
   // window.addEventListener('load', () => {
   //   let portfolioContainer = select('.portfolio-container');

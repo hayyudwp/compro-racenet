@@ -34,7 +34,7 @@ class ContentController extends Controller
                  ->addIndexColumn()
                  ->addColumn('action', function ($row) {
                      $id = $row->id;
-                     $btn = '<a class="btn btn-warning" href="' . route("content.edit", $id) . '"><i class="bi bi-exclamation-square-fill"></i></a>&nbsp; <button class="btn btn-danger delete-item" data-id="' . $id . '"><i class="bi bi-trash-fill"></i></button>';
+                     $btn = '<a class="btn btn-warning" href="' . route("content.edit", $id) . '"><i class="bi bi-exclamation-square-fill"></i></a>&nbsp;';
                      return $btn;
                  })
                  ->addColumn('image', function ($row) {

@@ -137,12 +137,12 @@
                         type: "POST",
                         url: "{{ route('header.delete') }}",
                         data: {
-                            _token: $('meta[name="csrf-token"]').attr('header'),
+                            _token: $('meta[name="csrf-token"]').attr('content'),
                             itemID: id
                         },
                         success: function(data) {
                             table.ajax.reload();
-                            if (data.status == 'success') {
+                            if (data.status === 'success') {
                                 Swal.fire('Deleted!', data.message, 'success');
                             } else {
                                 Swal.fire('Error', data.message, 'error');
@@ -150,12 +150,13 @@
                         },
                         error: function(data) {
                             console.error('Error:', data);
-                            Swal.fire('Error', data.message, 'error');
+                            Swal.fire('Error', 'An error occurred while deleting the content.', 'error');
                         }
                     });
                 }
             });
         });
+
     });
 </script>
 @endpush

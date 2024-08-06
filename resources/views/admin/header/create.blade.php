@@ -52,7 +52,7 @@
                                             <div class="mb-3">
                                                 <label class="form-label">File Upload</label>
                                                 <input type="file" name="image" id="upload_image" accept="image/png, image/gif, image/jpeg" class="form-control" required>
-                                                <span>Size : 1512 x 615 px</span>
+                                                <span style="font-size: 12px; color: gray; margin: 0 !important;">size : 1512 x 615 px</span>
                                             </div>
                                         </div>
                                     </div>

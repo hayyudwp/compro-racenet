@@ -59,6 +59,7 @@
                                                         <i class="bi bi-eye-fill"></i>
                                                     </button></label>
                                                 <input type="file" name="image" class="form-control mb-2">
+                                                <span style="font-size: 12px; color: gray; margin: 0 !important;">size : 526 x 770 px</span>
                                             </div>
                                         </div>
                                     </div>
@@ -95,7 +96,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="{{ asset('storage/content') }}/{{$content->image}}" width="100%">
+                <img src="{{ asset('storage/content/' . $content->image) }}" width="100%">
             </div>
         </div>
     </div>

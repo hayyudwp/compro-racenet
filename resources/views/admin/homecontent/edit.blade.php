@@ -59,6 +59,7 @@
                                                         <i class="bi bi-eye-fill"></i>
                                                     </button></label>
                                                 <input type="file" name="value_file" class="form-control mb-2">
+                                                <span style="font-size: 12px; color: gray; margin: 0 !important;">size : 1512 x 615 px</span>
                                             </div>
                                         </div>
                                     </div>
@@ -83,15 +84,16 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">{{$homecontent->image}}</h5>
+                <h5 class="modal-title">{{$homecontent->value_file}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="{{ asset('storage/home') }}/{{$homecontent->image}}" width="100%">
+                <img src="{{ asset('storage/home/' . $homecontent->value_file) }}" width="100%">
             </div>
         </div>
     </div>
 </div>
+
 
 @endsection
 
