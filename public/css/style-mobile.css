@@ -70,4 +70,38 @@
         font-size: 16px;
         line-height: 5.5;    
     }
+
+    .flex-reserve-mobile{
+        flex-direction: column-reverse;
+    }
+    .text-broadband-mobile{
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .text-center-mobile{
+        text-align: center;
+    }
+
+    .width-80-mobile{
+        width: 80%;
+    }
+
+    .title-dedicated{
+        font-size: 32px;
+        margin-top: 15px;
+    }
+
+    .desc-dedicated{
+        font-size: 14px;
+    }
+
+    .mt-10-mobile{
+        margin-top: 10px;
+    }
+
+    .slick-arrow{
+        display: none !important;
+    }
 }

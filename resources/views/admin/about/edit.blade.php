@@ -10,7 +10,6 @@
         <h1>About List</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('about.index') }}">About List</a></li>
                 <li class="breadcrumb-item active">Edit About List</li>
             </ol>
@@ -85,11 +84,5 @@
 
 @push('scripts')
 <script>
-      tinymce.init({
-            selector: 'textarea',
-            plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-            toolbar_mode: 'floating',
-            menubar: false
-        });
 </script>
 @endpush

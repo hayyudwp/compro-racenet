@@ -10,7 +10,6 @@
         <h1>About Content</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item active">About Content</li>
             </ol>
         </nav>
@@ -34,7 +33,7 @@
                         </div>
                         @endif
                         <div class="d-flex justify-content-between mb-2">
-                            <h5 class="card-title">List About Content</h5>
+                            <h5 class="card-title">About Content</h5>
                         </div>
                         <!-- Table with stripped rows -->
 
@@ -73,6 +72,9 @@
             serverSide: true,
             responsive: true,
             scrollX: true,
+            paging: false,
+            searching: false,
+            info: false,
             language: {          
                 processing: "<div class='spinner-border text-primary' role='status'><span class='visually-hidden'>Loading...</span></div>",
             },

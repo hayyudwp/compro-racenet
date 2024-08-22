@@ -36,6 +36,10 @@ class PriceListController extends Controller
                      $btn = '<a class="btn btn-warning" href="' . route("pricelist.edit", $id) . '"><i class="bi bi-exclamation-square-fill"></i></a>&nbsp; <button class="btn btn-danger delete-item" data-id="'.$id.'"><i class="bi bi-trash-fill"></i></button>';
                      return $btn;
                  })
+                 ->editColumn('desc', function($row) {
+                    return $row->desc;
+                })
+                ->rawColumns(['action', 'desc'])
                  ->make(true);
          }
          return view('admin.pricelist.index');

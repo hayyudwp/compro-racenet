@@ -9,7 +9,6 @@
         <h1>About List</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('about.index') }}">About List</a></li>
                 <li class="breadcrumb-item active">New About List</li>
             </ol>
@@ -52,6 +51,7 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Code Icon</label>
                                                 <input type="text" name="link_icon" class="form-control" required>
+                                                <a href="https://icons.getbootstrap.com/" target="_blank" class="link-icon">Click here for view icon!!</a>
                                             </div>
                                         </div>
                                     </div>

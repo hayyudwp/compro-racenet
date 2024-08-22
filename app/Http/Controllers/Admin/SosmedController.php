@@ -37,6 +37,12 @@ class SosmedController extends Controller
                      $btn = '<a class="btn btn-warning" href="' . route("sosmed.edit", $id) . '"><i class="bi bi-exclamation-square-fill"></i></a>&nbsp; <button class="btn btn-danger delete-item" data-id="'.$id.'"><i class="bi bi-trash-fill"></i></button>';
                      return $btn;
                  })
+                 ->editColumn('code_icon', function($item) {
+                    $code_icon = $item->code_icon;
+                    $class = '<div class="icon-data-table">'.$code_icon.'</div>';
+                    return $class; // Pastikan HTML tidak di-escape
+                })
+                ->rawColumns(['action', 'code_icon']) // Tambahkan 'link' di sini
                  ->make(true);
          }
          return view('admin.sosmed.index');

@@ -5,8 +5,7 @@
 <main>
     <div class="container">
 
-        <!-- Header -->
-        <div class="row mt-5">
+        <div class="row mt-5" data-aos="fade-up" data-aos-delay="200">
             <div class="col-md-8">
                 <h1 class="tagline-home">Nikmati <span class="tagline-blue">RACE NET</span> Internet Cepat dan Unlimited</h1>
                 <p class="sub-tagline-home">Kami hadir memberikan layanan terbaik untuk kamu</p>
@@ -29,13 +28,11 @@
                 <img class="img-home" src="{{ asset('img/about_racenet.png') }}" alt="">
             </div>
         </div>
-        <!-- End Header -->
 
-        <!-- Service -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" >
             <div class="gradient"></div>
-            <h2 class="text-center title-bandwith">Tentukan Bandwith Sesuai Kebetuhanmu</h2>
-            <p class="text-center desk-bandwith">Sekarang saatnya menikmati kecepatan baru internet fiber ultra cepat dan unlimited dari RACE Net. Langganan Sekarang!</p>
+            <h2 class="text-center title-bandwith" data-aos="fade-up" data-aos-delay="200">Tentukan Bandwith Sesuai Kebetuhanmu</h2>
+            <p class="text-center desk-bandwith" data-aos="fade-up" data-aos-delay="200">Sekarang saatnya menikmati kecepatan baru internet fiber ultra cepat dan unlimited dari RACE Net. Langganan Sekarang!</p>
 
 
             <ul id="portfolio-flters" class="list-bandwith d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">

@@ -1094,6 +1094,18 @@ section {
   padding: 0;
 }
 
+.portfolio-item {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.portfolio-item.filtered-out {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
@@ -2255,7 +2267,7 @@ section {
   /* Allow description to take available space */
 }
 
-.icon-footer:not(:last-child){
+.icon-footer:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -2277,7 +2289,9 @@ section {
   border-radius: 50%;
   background-size: 70% 100% !important;
 }
-.carousel-control-next, .carousel-control-prev {
+
+.carousel-control-next,
+.carousel-control-prev {
   opacity: .8;
 }
 
@@ -2287,8 +2301,11 @@ section {
 }
 
 .carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
-    filter: invert(100%);
+.carousel-control-prev
+
+/*, .carousel-indicators */
+  {
+  filter: invert(100%);
 }
 
 .overlay {
@@ -2312,10 +2329,214 @@ section {
   font-weight: 200;
 }
 
-.row.side-image{
+.row.side-image {
   --bs-gutter-x: 0 !important;
 }
 
 .help-container {
-    height: auto; /* Pastikan konten di dalam container tidak meluas */
+  height: auto;
+  /* Pastikan konten di dalam container tidak meluas */
+}
+
+
+.title-dedicated {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 120%;
+}
+
+.desc-dedicated {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.btn-dedicated {
+  font-family: "Inter", Sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: none;
+  /* fill: red; */
+  /* color: red; */
+  /* background-color: #fff; */
+  border-style: none;
+  border-radius: 8px;
+  padding: 15px 70px;
+}
+
+.title-dedicated-detail {
+  font-size: 28px;
+  margin-bottom: 1rem;
+  line-height: 140%;
+  padding: 0 10%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card-dedicated {
+  height: 100%;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.card-icon-dedicated {
+  padding: 10px;
+}
+
+.card-icon-dedicated i {
+  font-size: 40px;
+  line-height: 20px;
+  color: #FF7A08;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.card-icon-dedicated:hover i {
+  top: -10px;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #3298b2;
+  --bs-btn-border-color: #3298b2;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0b5c71;
+  --bs-btn-hover-border-color: #0b5c71;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0b5c71;
+  --bs-btn-active-border-color: #0b5c71;
+}
+
+.title-broadband-detail {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.desc-broadband-detail {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.img-broadband-detail {
+  max-width: 50%;
+}
+
+.text-broadband-detail {
+  display: flex;
+  align-items: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.move-up {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.move-up:hover {
+  top: -10px;
+}
+
+.card-icon-hosting {
+  padding: 10px;
+}
+
+.card-icon-hosting i {
+  font-size: 42px;
+  line-height: 20px;
+  color: #FF7A08;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.title-hosting-detail {
+  font-size: 35px;
+  margin-bottom: 3rem;
+  line-height: 140%;
+  padding: 0 10%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.gradient-hosting {
+  z-index: -1;
+  position: absolute;
+  height: 120%;
+  background-color: #3298B2;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(#3298B2, #79DEF8);
+}
+
+.title-hosting-detail {
+  color: #FFFFFF;
+  font-size: 35px;
+  line-height: 140%;
+  padding: 0 10%;
+  font-weight: 600;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.top-title-hosting-detail {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.title-colocation-detail {
+  font-size: 35px;
+  margin-bottom: 0;
+  line-height: 140%;
+  padding: 0 10%;
+  font-weight: 600;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.bottom-title-colocation-detail {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+.background-gradient-blue{
+  z-index: -1;
+    background-color: #3298B2;
+    background-image: linear-gradient(#3298B2, #79DEF8);
+}
+
+.card-colocation{
+  height: 100%;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.color-orange{
+  color: #FF7A08 !important;
+}
+
+.title-list-colocation{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.desc-list-colocation{
+  color: #636363;
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 400;
 }

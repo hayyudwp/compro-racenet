@@ -10,7 +10,6 @@
         <h1>Social Media</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item active">Social Media</li>
             </ol>
         </nav>
@@ -48,8 +47,8 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Title</th>
                                         <th>Icon</th>
+                                        <th>Title</th>
                                         <th>Link</th>
                                         <th>Action</th>
                                     </tr>
@@ -92,13 +91,19 @@
                     orderable: false, // Disable ordering on this column
                     searchable: false // Disable searching on this column
                 },
+                
+                {
+                    data: 'code_icon',
+                    name: 'code_icon',
+                    render: function(data, type, full, meta) {
+                        return data ? data : ''; // Return the row index + 1
+                    },
+                    orderable: false,
+                    searchable: false
+                },
                 {
                     data: 'title',
                     name: 'title'
-                },
-                {
-                    data: 'code_icon',
-                    name: 'code_icon'
                 },
                 {
                     data: 'link',

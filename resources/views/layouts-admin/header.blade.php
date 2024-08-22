@@ -2,7 +2,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="{{ route('dashboard') }}" class="logo d-flex align-items-center justify-content-center">
+      <a href="{{ route('home') }}" class="logo d-flex align-items-center justify-content-center">
         <img src="{{ asset('img/logo.png') }}" alt="">
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>

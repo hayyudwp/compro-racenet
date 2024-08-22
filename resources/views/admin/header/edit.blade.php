@@ -10,7 +10,6 @@
         <h1>Header</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('header.index') }}">Header</a></li>
                 <li class="breadcrumb-item active">Edit Header</li>
             </ol>
@@ -51,7 +50,7 @@
                                                 <input type="text" name="title" class="form-control" required value="{{ $header->title }}">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <div class="mb-3">
                                                 <label class="form-label">
                                                     File Upload

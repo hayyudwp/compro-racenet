@@ -36,13 +36,12 @@ class AboutRaceController extends Controller
                      $btn = '<a class="btn btn-warning" href="' . route("about.edit", $id) . '"><i class="bi bi-exclamation-square-fill"></i></a>&nbsp; <button class="btn btn-danger delete-item" data-id="' . $id . '"><i class="bi bi-trash-fill"></i></button>';
                      return $btn;
                  })
-                 ->addColumn('image', function ($row) {
-                     // Assuming 'image' is the field containing the image path or URL
-                     $imagePath = $row->image;
-                     $imgTag = '<img src="' . asset('storage/about') . '/' . $imagePath . '" alt="About Image" width="200" height="200">';
-                     return $imgTag;
-                 })
-                 ->rawColumns(['action', 'image'])
+                 ->editColumn('link_icon', function($item) {
+                    $link_icon = $item->link_icon;
+                    $class = '<div class="icon-data-table">'.$link_icon.'</div>';
+                    return $class; // Pastikan HTML tidak di-escape
+                })
+                ->rawColumns(['action', 'link_icon']) // Tambahkan 'link' di sini
                  ->make(true);
          }
          return view('admin.about.index');

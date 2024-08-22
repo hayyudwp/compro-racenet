@@ -10,7 +10,6 @@
         <h1>About Content</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('content.index') }}">About Content</a></li>
                 <li class="breadcrumb-item active">Edit About Content</li>
             </ol>

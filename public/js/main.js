@@ -209,7 +209,7 @@
         if (all) {
             elements.forEach(element => element.addEventListener(event, handler));
         } else {
-            elements.addEventListener(event, handler);
+            if (elements) elements.addEventListener(event, handler);
         }
     }
 
@@ -219,7 +219,7 @@
         $('.portfolio-slider').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 2000,
             dots: true,
             arrows: true,
@@ -237,7 +237,11 @@
         if (initialFilterValue === 'all') {
             $('.portfolio-slider').slick('slickUnfilter');
         } else {
-            $('.portfolio-slider').slick('slickFilter', initialFilterValue);
+            $('.portfolio-item').addClass('filtered-out');
+            setTimeout(() => {
+                $('.portfolio-slider').slick('slickFilter', initialFilterValue);
+                $('.portfolio-item' + initialFilterValue).removeClass('filtered-out');
+            }, 500);
         }
 
         on('click', '#portfolio-flters li', function(e) {
@@ -248,13 +252,18 @@
             this.classList.add('filter-active');
 
             let filterValue = this.getAttribute('data-filter');
-            // Filter Slick Slider items
-            if (filterValue === 'all') {
-                $('.portfolio-slider').slick('slickUnfilter');
-            } else {
-                $('.portfolio-slider').slick('slickUnfilter');
-                $('.portfolio-slider').slick('slickFilter', filterValue);
-            }
+            
+            // Tambahkan transisi sebelum mengganti filter
+            $('.portfolio-item').addClass('filtered-out');
+            setTimeout(() => {
+                if (filterValue === 'all') {
+                    $('.portfolio-slider').slick('slickUnfilter');
+                } else {
+                    $('.portfolio-slider').slick('slickUnfilter');
+                    $('.portfolio-slider').slick('slickFilter', filterValue);
+                }
+                $('.portfolio-item' + filterValue).removeClass('filtered-out');
+            }, 500); // Waktu ini harus sinkron dengan durasi transisi di CSS
         }, true);
     });
 });

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Coverage RACE NET ')
+@section('title', 'Coverage - RACE NET')
 
 @section('content')
 <main>

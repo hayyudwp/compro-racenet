@@ -20,6 +20,7 @@
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('vendor/vendor-admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/vendor-admin/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dataTables.bootstrap5.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/vendor-admin/sweetalert/dist/sweetalert2.min.css') }}" rel="stylesheet">

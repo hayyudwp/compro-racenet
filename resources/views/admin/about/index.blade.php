@@ -10,7 +10,6 @@
         <h1>About List</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item active">About List</li>
             </ol>
         </nav>
@@ -94,7 +93,10 @@
                 },
                 {
                     data: 'link_icon',
-                    name: 'link_icon'
+                    name: 'link_icon',
+                    render: function(data, type, full, meta) {
+                        return data ? data : '';
+                    }
                 },
                 {
                     data: 'title',

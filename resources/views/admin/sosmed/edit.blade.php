@@ -10,7 +10,6 @@
         <h1>Social Media</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('sosmed.index') }}">Social Media</a></li>
                 <li class="breadcrumb-item active">Edit Social Media</li>
             </ol>
@@ -55,6 +54,7 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Icon</label>
                                                 <input type="text" name="code_icon" class="form-control" required value="{{ $sosmed->code_icon }}">
+                                                <a href="https://icons.getbootstrap.com/" target="_blank" class="link-icon">Click here for view icon!!</a>
                                             </div>
                                         </div>
                                     </div>

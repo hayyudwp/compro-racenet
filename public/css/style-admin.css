@@ -1285,3 +1285,17 @@ color: #fff !important;
 .text-right{
   text-align: right !important;
 }
+
+.icon-data-table{
+  font-size: 40px;
+  text-align: center;
+}
+
+.link-icon{
+  font-size: 12px; 
+  margin: 0 !important;
+}
+
+.link-icon:hover{
+  text-decoration: underline;
+}

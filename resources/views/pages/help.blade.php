@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'About RACE NET ')
+@section('title', 'Help - RACE NET')
 
 @section('content')
 <main>

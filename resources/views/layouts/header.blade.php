@@ -11,6 +11,15 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto  {{ (request()->segment(1) == '') ? 'active' : '' }}" href="{{ route('home') }}">Beranda</a></li>
+          <li class="dropdown"><a class="{{ (request()->segment(1) == 'product') ? 'active' : '' }} " href="{{ route('broadband') }}"><span>Produk</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{ route('broadband') }}">Broadband Internet</a></li>
+              <li><a href="{{ route('dedicated') }}">Dedicated Internet</a></li>
+              <li><a href="{{ route('hosting') }}">Hosting & Collocation</a></li>
+              <li><a href="{{ route('service') }}">Manage Service Solution</a></li>
+              <li><a href="{{ route('solution') }}">IT Solution</a></li>
+            </ul>
+          </li>
           <li><a class="nav-link scrollto {{ (request()->segment(1) == 'about') ? 'active' : '' }}" href="{{ route('about') }}">Tentang Kami</a></li>
           <li><a class="nav-link scrollto {{ (request()->segment(1) == 'coverage') ? 'active' : '' }}" href="{{ route('coverage') }}">Cakupan Area</a></li>
           <li><a class="nav-link scrollto {{ (request()->segment(1) == 'contact') ? 'active' : '' }}" href="{{ route('contact') }}">Kontak</a></li>

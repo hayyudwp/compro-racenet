@@ -14,11 +14,12 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>QUICK LINK</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tentang Kami</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Cakupan Area</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Bantuan</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Beranda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('broadband') }}">Produk</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('about') }}">Tentang Kami</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('coverage') }}">Cakupan Area</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('contact') }}">Kontak</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('help') }}">Bantuan</a></li>
             </ul>
           </div>
 

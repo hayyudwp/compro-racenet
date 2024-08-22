@@ -10,7 +10,6 @@
         <h1>Price List</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item active">Price List</li>
             </ol>
         </nav>
@@ -89,7 +88,14 @@ $(document).ready(function() {
             { data: 'title', name: 'title' },
             { data: 'bandwith', name: 'bandwith' },
             { data: 'price', name: 'price' },
-            { data: 'desc', name: 'desc' },
+            {
+                data: 'desc', // This should match the 'desc' column in the controller
+                name: 'desc',
+                render: function(data, type, full, meta) {
+                    // Render as HTML
+                    return data;
+                }
+            },
             { data: 'category', name: 'category' },
             { data: 'action', name: 'action', orderable: false, searchable: false },
         ],
