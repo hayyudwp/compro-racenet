@@ -10,7 +10,6 @@
         <h1>Suggest</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item active">Suggest</li>
             </ol>
         </nav>
@@ -46,6 +45,7 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Message</th>
+                                        <th>Created at</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -72,19 +72,18 @@
             serverSide: true,
             responsive: true,
             scrollX: true,
-            language: {          
+            language: {
                 processing: "<div class='spinner-border text-primary' role='status'><span class='visually-hidden'>Loading...</span></div>",
             },
             ajax: "{{ route('suggest.index') }}",
-            columns: [
-                {
+            columns: [{
                     data: null,
                     name: 'index',
                     render: function(data, type, full, meta) {
-                        return meta.row + 1; // Return the row index + 1
+                        return meta.row + 1;
                     },
-                    orderable: false, // Disable ordering on this column
-                    searchable: false // Disable searching on this column
+                    orderable: false,
+                    searchable: false
                 },
                 {
                     data: 'name',
@@ -98,14 +97,22 @@
                     data: 'message',
                     name: 'message'
                 },
+                {
+                    data: 'created_at',
+                    name: 'created_at',
+                    render: function(data, type, row) {
+                        // Gunakan Moment.js untuk memformat tanggal
+                        return moment(data).format('HH:mm DD MMMM YYYY');
+                    }
+                }
             ],
+            order: [
+                [1, 'asc']
+            ], // Urutkan berdasarkan kolom pertama yang relevan (misalnya 'name')
             createdRow: function(row, data, dataIndex) {
-                // $('td', row).eq(4).addClass('text-center');
+                // Optional: Tambahkan kustomisasi row jika diperlukan
             }
         });
-
-        // Handle delete button click
-       
     });
 </script>
 @endpush

@@ -42,7 +42,7 @@ use App\Models\Sosmed;
     Route::get('/product/manage-service-solution', [ViewController::class, 'service'])->name('service');
     Route::get('/product/it-solution', [ViewController::class, 'solution'])->name('solution');
     Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
-    Route::get('/contact/store', [SuggestController::class, 'store'])->name('contact.store');
+    Route::post('/contact/store', [SuggestController::class, 'store'])->name('contact.store');
     Route::get('/help', [ViewController::class, 'help'])->name('help');
     Route::get('/coverage', [ViewController::class, 'coverage'])->name('coverage');
 

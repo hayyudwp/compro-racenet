@@ -5,9 +5,19 @@
 <main>
     <div class="container">
         <div class="row justify-content-center my-5">
-           <div class="col-md-7">
+            @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+            @elseif (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+            @endif
+            <div class="col-md-7">
                 <div class="card card-contact">
-                    <form action="{{ route('contact.store') }}">
+                    <form action="{{ route('contact.store') }}" method="POST">
+                        @csrf
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -42,20 +52,20 @@
                         <div class="col-md-5">
                             <ul class="list-office">
                                 <li> <strong>Contact Center </strong></li>
-                                <li> <strong>Support Team :</strong> <br>Email          : support@race.net.id <br> Whatsapp : 0822-1078-0120</li>
-                                <li> <strong>Sales Team :</strong> <br>Email          : sales@race.net.id <br> Whatsapp : 0812-7447-7725</li>
+                                <li> <strong>Support Team :</strong> <br>Email : support@race.net.id <br> Whatsapp : 0822-1078-0120</li>
+                                <li> <strong>Sales Team :</strong> <br>Email : sales@race.net.id <br> Whatsapp : 0812-7447-7725</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-           </div>
-           <div class="col-md-5">
+            </div>
+            <div class="col-md-5">
                 <div class="img-contact">
                     <div class="abso-content">
                         <img src="{{ asset("img/img-contact.jpg") }}" alt="">
-                        <p class="text-img-about">Anda mencari informasi lebih lanjut atau ingin mencoba salah satu rencana berbayar Asana kami? Kirim informasi Anda dan 
-                            seorang perwakilan Asana akan menghubungi Anda secepat mungkin. Punya pertanyaan sederhana? 
-                             <a href="{{ route('help') }}" class="link-faq">Lihat Halaman FAQ</a> 
+                        <p class="text-img-about">Anda mencari informasi lebih lanjut atau ingin mencoba salah satu rencana berbayar Asana kami? Kirim informasi Anda dan
+                            seorang perwakilan Asana akan menghubungi Anda secepat mungkin. Punya pertanyaan sederhana?
+                            <a href="{{ route('help') }}" class="link-faq">Lihat Halaman FAQ</a>
                         </p>
                     </div>
                 </div>
