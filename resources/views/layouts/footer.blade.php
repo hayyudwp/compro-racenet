@@ -5,10 +5,13 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <img src="{{ asset('img/logo.png') }}" alt="" class="logo-footer">
+            @foreach ($footer_desc as $f)
+            <img src="{{ asset('storage/footer/logo/'.$f->image) }}" alt="" class="logo-footer">
             <p>
-              RACEnet mengedepankan layanan internet yang cepat dan handal dengan teknologi Fiber Optic yang semua layanan dari kami bebas quota atau unlimited.
+              {{$f->desc}}
             </p>
+            @endforeach
+
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
@@ -25,46 +28,21 @@
 
           <div class="col-lg-3 col-md-6 footer-links">
             <ul>
-              <li class="p-0"><strong>Head Office :</strong></li>
-              <li class="pt-0">Jl. Kubis 3 Pondok Cabe Ilir Tangerang Selatan</li>
-              <li class="p-0"><strong>Sukabumi Branch :</strong></li>
-              <li class="pt-0">Perum Mutiara Lido Sukabumi Jawa Barat</li>
-              <li class="p-0"><strong>Bogor Branch 1 :</strong></li>
-              <li class="pt-0">Jl. Kayu Manis Tanah Sereal Bogor Jawa Barat</li>
-              <li class="p-0"><strong>Bogor Branch 2 :</strong></li>
-              <li class="pt-0">Kierana Indah Residence 2 Blok D4 No. 27 Parung Bogor</li>
+              @foreach ($branch as $b)
+              <li class="p-0"><strong>{{$b->title}} :</strong></li>
+              <li class="pt-0">{!! $b->desc !!}</li>
+              @endforeach
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <ul>
-              <li class="p-0"><strong>Support Team :</strong></li>
-              <table class="mb-3">
-                <tr>
-                  <td>Email</td>
-                  <td>:</td>
-                  <td>support@race.net.id</td>
-                </tr>
-                <tr>
-                  <td>Whatsapp</td>
-                  <td>:</td>
-                  <td>0822-1078-0120</td>
-                </tr>
-              </table>
-              <li class="p-0"><strong>Sales Team :</strong></li>
-                <table class="mb-3">
-                  <tr>
-                    <td>Email</td>
-                    <td>:</td>
-                    <td>sales@race.net.id</td>
-                  </tr>
-                  <tr>
-                    <td>Whatsapp</td>
-                    <td>:</td>
-                    <td>0812-7447-7725</td>
-                  </tr>
-                </table>
-                
+              @foreach ($contact_footer as $c)
+              <div class="contact_footer mb-3">
+                <li class="p-0"><strong>{{$c->title}} :</strong></li>
+                {!! $c->desc !!}
+              </div>
+              @endforeach                
             </ul>
           </div>
 

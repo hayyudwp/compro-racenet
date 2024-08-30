@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\Admin\AboutRaceController;
-use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\BranchController;
+use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\PriceListController;
 use App\Http\Controllers\Admin\HelpController;
 use App\Http\Controllers\Admin\CoverageController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\Admin\HostingController;
 use App\Http\Controllers\Admin\GeneralController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\ColocationController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ITSolutionController;
 use App\Http\Controllers\Admin\ManageServiceController;
 use App\Http\Controllers\ViewController;
@@ -226,6 +228,33 @@ use App\Models\Sosmed;
             Route::get('/admin/product/it-solution/detail/edit/{it_solution_detail}', 'edit_detail')->name('it-solution-detail.edit');
             Route::put('/admin/product/it-solution/detail/update/{it_solution_detail}', 'update_detail')->name('it-solution-detail.update');
             Route::post('/admin/product/it-solution/detail/delete', 'delete_detail')->name('it-solution-detail.delete');
+        });
+
+        Route::controller(BranchController::class)->group(function () {
+            Route::get('/admin/footer/branch', 'index')->name('branch.index');
+            Route::get('/admin/footer/branch/create', 'create')->name('branch.create');
+            Route::post('/admin/footer/branch/store', 'store')->name('branch.store');
+            Route::get('/admin/footer/branch/edit/{branch}', 'edit')->name('branch.edit');
+            Route::put('/admin/footer/branch/update/{branch}', 'update')->name('branch.update');
+            Route::post('/admin/footer/branch/delete', 'delete')->name('branch.delete');
+        });
+
+        Route::controller(ContactController::class)->group(function () {
+            Route::get('/admin/footer/contact', 'index')->name('contact.index');
+            Route::get('/admin/footer/contact/create', 'create')->name('contact.create');
+            Route::post('/admin/footer/contact/store', 'store')->name('contact.store');
+            Route::get('/admin/footer/contact/edit/{contact}', 'edit')->name('contact.edit');
+            Route::put('/admin/footer/contact/update/{contact}', 'update')->name('contact.update');
+            Route::post('/admin/footer/contact/delete', 'delete')->name('contact.delete');
+        });
+
+        Route::controller(FooterController::class)->group(function () {
+            Route::get('/admin/footer/footer-description', 'index')->name('footer-desc.index');
+            Route::get('/admin/footer/footer-description/create', 'create')->name('footer-desc.create');
+            Route::post('/admin/footer/footer-description/store', 'store')->name('footer-desc.store');
+            Route::get('/admin/footer/footer-description/edit/{footer_desc}', 'edit')->name('footer-desc.edit');
+            Route::put('/admin/footer/footer-description/update/{footer_desc}', 'update')->name('footer-desc.update');
+            Route::post('/admin/footer/footer-description/delete', 'delete')->name('footer-desc.delete');
         });
 
         Route::controller(SuggestController::class)->group(function () {

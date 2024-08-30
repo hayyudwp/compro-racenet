@@ -36,24 +36,34 @@
                             <label for="exampleFormControlTextarea1">Pesan</label>
                             <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-                        <button class="btn btn-primary btn-contact mb-3">Submit</button>
+                        <button class="btn btn-primary btn-contact mb-3 text-center">Submit</button>
                     </form>
 
 
                     <div class="d-flex">
                         <div class="col-md-7">
                             <ul class="list-office">
-                                <li> <strong>Head Office :</strong> <br>Jl. Kubis 3 Pondok Cabe Ilir Tangerang Selatan</li>
-                                <li> <strong>Sukabumi Branch :</strong> <br>Perum Mutiara Lido Sukabumi Jawa Barat</li>
-                                <li> <strong>Bogor Branch 1 :</strong> <br>Jl. Kayu Manis Tanah Sereal Bogor Jawa Barat</li>
-                                <li> <strong>Bogor Branch 2 :</strong> <br>Kierana Residance 2 Blok D4 No. 27, Parung, Bogor</li>
+                                @foreach ($branch as $b)
+                                <li> 
+                                    <strong>{{$b->title}} :</strong> 
+                                    <br>
+                                    {{$b->desc}}
+                                </li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="col-md-5">
                             <ul class="list-office">
                                 <li> <strong>Contact Center </strong></li>
-                                <li> <strong>Support Team :</strong> <br>Email : support@race.net.id <br> Whatsapp : 0822-1078-0120</li>
-                                <li> <strong>Sales Team :</strong> <br>Email : sales@race.net.id <br> Whatsapp : 0812-7447-7725</li>
+                                @foreach ($contact_footer as $c)
+                                <li> 
+                                    <strong>{{$c->title}} :</strong> 
+                                    <br>
+                                    <div class="page_contact">
+                                        {!! $c->desc !!}
+                                    </div>
+                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

@@ -2540,3 +2540,20 @@ section {
   line-height: 160%;
   font-weight: 400;
 }
+
+.contact_footer p{
+  margin-bottom: 0;
+}
+
+.page_contact p{
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.page_contact p a{
+  color: #212529;
+}
+
+.list-office li p{
+  font-size: 15px;
+}

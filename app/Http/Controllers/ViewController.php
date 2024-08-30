@@ -6,6 +6,7 @@ use App\Models\AboutRN;
 use App\Models\Help;
 use App\Models\Coverage;
 use App\Models\Content;
+use App\Models\Footer;
 use App\Models\Sosmed;
 use App\Models\General;
 use App\Models\Product;
@@ -42,8 +43,10 @@ class ViewController extends Controller
 
     public function contact()
     {
+        $branch = Footer::where('category', 'branch')->get();
+        $contact_footer = Footer::where('category', 'contact')->get();
         
-        return view('pages.contact');
+        return view('pages.contact', compact('branch','contact_footer'));
     }
 
    
@@ -60,6 +63,24 @@ class ViewController extends Controller
     {
         $sosmed = Sosmed::all();
         return view('layouts.footer', compact('sosmed'));
+    }
+
+    public function branch()
+    {
+        $branch = Footer::where('category', 'branch')->get();
+        return view('layouts.footer', compact('branch'));
+    }
+
+    public function contact_footer()
+    {
+        $contact = Footer::where('category', 'contact')->get();
+        return view('layouts.footer', compact('contact_footer'));
+    }
+
+    public function footer_desc()
+    {
+        $footer_desc = Footer::where('category', 'footer_desc')->get();
+        return view('layouts.footer', compact('footer_desc'));
     }
 
     public function broadband()

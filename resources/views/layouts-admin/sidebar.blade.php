@@ -85,6 +85,28 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link {{ (request()->segment(2) == 'footer') ? '' : 'collapsed' }}" data-bs-target="#footer-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+          <i class="bi bi-person-rolodex"></i><span>Footer</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="footer-nav"class="nav-content collapse {{ (request()->segment(2) == 'footer') ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{ route('footer-desc.index') }}" class="{{ (request()->segment(3) == 'footer-description') ? 'active' : '' }}">
+              <i class="bi bi-circle"></i><span>Description</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('branch.index') }}" class="{{ (request()->segment(3) == 'branch') ? 'active' : '' }}">
+              <i class="bi bi-circle"></i><span>Branch</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('contact.index') }}" class="{{ (request()->segment(3) == 'contact') ? 'active' : '' }}">
+              <i class="bi bi-circle"></i><span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
         <a class="nav-link {{ (request()->segment(2) == 'coverage') ? '' : 'collapsed' }}" href="{{ route('coverage.index') }}">
           <i class="bi bi-map-fill"></i>
           <span>Coverage</span>
